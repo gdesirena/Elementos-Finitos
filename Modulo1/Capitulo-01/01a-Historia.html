@@ -1,0 +1,204 @@
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><img src="Imagenes/Titulos/Head1.png" alt="Logo1"></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Breve-historia-del-M&#233;todo-de-los-Elementos-Finitos">Breve historia del M&#233;todo de los Elementos Finitos<a class="anchor-link" href="#Breve-historia-del-M&#233;todo-de-los-Elementos-Finitos">&#182;</a></h1>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Una introducción a este método no podría estar completo sin una breve revisión a su historia. La historia del <strong>Método de los Elementos Finitos</strong>(MEF o FEM en inglés) es particularmente interesante porque su historia es relativamente reciente: el método existe apenas desde mediados de los años cincuenta.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Antecedentes">Antecedentes<a class="anchor-link" href="#Antecedentes">&#182;</a></h3><p>Aunque el <strong>MEF</strong> fue desarrollado a partir de los años cincuenta el desarrollo matemático que lo sustenta fue establecido al inicio del siglo XX.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>El desarrollo de los procedimientos del cálculo varacional fueron presentados por <strong>Rayleigh</strong> (1877) y <strong>Ritz</strong> (1909). Esta base teórica (referida como Rayleigh-Ritz) explica porque el método funciona. Sin embargo, este planteamiento está limitado a cierto tipo de problemas (difusión lineal) y no permite la solución de problemas con comportamientos diferentes (en particular problemas que tienen que ver con comportamiento de fluidos).</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Unos años después, en 1915, <strong>Galerkin</strong> propuso un método a partir del <strong>método de los residuos ponderados</strong> que provee de una base teórica para un espectro mucho más amplio de problemas.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Estos desarrollos son fundamentales para el desarrollo de este curso ya que será precisamente la aplicación de estos métodos lo que será estudiado.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="1940's">1940's<a class="anchor-link" href="#1940's">&#182;</a></h3><p>Los primeros trabajos en la solución numérica de problemas de elementos de frontera se pueden encontrar al uso del método de las diferencias finitas; <strong>Southwell</strong> (1946) discutió el uso de estos métodos en su libro publicado a mediados de los años cuarenta. El método de las diferencias finitas es un método en el que el dominio se divide por segmentos o áreas de la misma geometría y tamaño y, por lo tanto, está limitado a geometrías sencillas o regulares.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>El inicio del MEF surge de esos métodos numéricos y la frustración de asociada a intentar utilizar el método de las diferencias finitas en problemas con geometrías irregulares y, por lo tanto más difíciles (<strong>Roache</strong>, 1972, 1998).</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><img src="Imagenes/historia/Finite_Differences.png" alt="Diferencias finitas"></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><img src="Imagenes/historia/fem_2d.jpg" alt="Diferencias finitas"></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="1950's">1950's<a class="anchor-link" href="#1950's">&#182;</a></h3><p>Iniciando a mediados de los años cincuenta los esfuerzos de resolver problemas continuos en elasticidad usando <strong>elementos</strong> discretos pequeños para describir el comportamiento global de barras elásticas simples comenzó a aparecer.</p>
+<p>En este tiempo se empezaron a desarrollar estructuras celulares para crear alas de aviones. El análisis de estas estructuras no era sencillo utilizando los métodos analíticos tradicionales ni con diferencias finitas dada la complejidad de las geometrías.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><img src="Imagenes/historia/Messerschmitt_Me_262.jpg" alt="Primeros Jets"></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><img src="Imagenes/historia/Gloster_Meteor_III.jpg" alt="Primeros Jets"></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><a href="https://en.wikipedia.org/wiki/John_Argyris">Argyris</a> (1954) y <strong>Turner</strong> et al. (1956) fueron los primeros en publicar el uso de dichas técnicas para la industria aeronáutica.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><img src="Imagenes/historia/Argyris1954-Wing.png" alt="Argyris 1945"></p>
+<div style="text-align: right">(Fuente: Argyris 1945)</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><img src="Imagenes/historia/Argyris1954-Ensamble.png" alt="Argyris 1945"></p>
+<div style="text-align: right">(Fuente: Argyris 1945)</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><img src="Imagenes/historia/Turner-PlacaRectangular.png" alt="Turner et al."></p>
+<div style="text-align: right">(Fuente: Turner et al. 1956)</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="1960's">1960's<a class="anchor-link" href="#1960's">&#182;</a></h3><p>Hasta el año de 1960 en nombre <strong>elemento finito</strong> no existía y se encuentra por primera vez en un artículo escrito por <a href="https://en.wikipedia.org/wiki/Ray_William_Clough">Clough</a>.</p>
+<p>Los primeros usos que se le dio al método fueron en problemas relacionados con resistencia de materiales (análisis estructural). Sin embargo pronto fue reconocida la versatibilidad del método para problemas no estructurales.</p>
+<p><strong>Zienkiewicz</strong> y <strong>Cheung</strong> (1965) fueron de los primeros de aplicar el <strong>MEF</strong> a problemas de <em>campos</em> (ej. conducción de calor, flujo de fluidos, etc.) que involucraban las ecuaciones de Laplace y Poisson.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><img src="Imagenes/historia/Clough-PlaneStress.png" alt="Clough"></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><img src="Imagenes/historia/Cllough-Thick-WalledCylinder.png" alt="Clough"></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><img src="Imagenes/historia/Clough-PlateEllipticHole.png" alt="Clough"></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="1970's">1970's<a class="anchor-link" href="#1970's">&#182;</a></h3><p>Buena parte del trabajo desarrollado para sistemas no lineales se puede encontrar en <strong>Oden</strong> (1972), mientras que los primeros esfuerzos de utilizarlo para problemas de transferencia de calor con fronteras complejas son discutidas por <strong>Huebner</strong> (1975); un modelo 3D para conducción de calor fue descrito por <strong>Heuser</strong> (1972). Las primeras aplicaciones del <strong>MEF</strong> para flujo de fluidos viscosos fue dado por <strong>Baker</strong> (1971).</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="1980-y-posteriores">1980 y posteriores<a class="anchor-link" href="#1980-y-posteriores">&#182;</a></h3><p>Es importante enfatizar que el <strong>MEF</strong> sigue siendo activamente desarrollado y ampliado. En la próxima gráfica se muestra el número de publicaciones académicas que tienen como tema el uso de este método para ingeniería eléctrica desde 1970 hasta el 2005.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><img src="Imagenes/historia/ArticulosFEM.png" alt="Clough"></p>
+
+</div>
+</div>
+</div>
+ 
+
