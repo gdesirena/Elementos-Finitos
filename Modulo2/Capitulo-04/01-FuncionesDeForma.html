@@ -1,0 +1,187 @@
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><img src="Imagenes/Titulos/Head4.png" alt="Titulo"></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><img src="Imagenes/Titulos/Head4-1.png" alt="Titulo"></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Elementos-triangulares">Elementos triangulares<a class="anchor-link" href="#Elementos-triangulares">&#182;</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Funciones-de-forma-lineales">Funciones de forma lineales<a class="anchor-link" href="#Funciones-de-forma-lineales">&#182;</a></h3><p>Lo primero que haremos para establecer las funciones de forma lineales para el elemento triangular.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Dado un triangulo con los vértices en los puntos $(x_1, y_1)$, $(x_2, y_2)$, $(x_3, y_3)$:</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Estamos buscando 3 funciones $N_1$, $N_2$ y $N_3$ que cumplan, la primera $N_1$:</p>
+$$a_{1} + a_{2} x_{1} + a_{3} y_{1} = 1$$$$a_{1} + a_{2} x_{2} + a_{3} y_{2} = 0$$<p>
+$$a_{1} + a_{2} x_{3} + a_{3} y_{3} = 0$$</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>La segunda $N_2$:</p>
+$$a_{1} + a_{2} x_{1} + a_{3} y_{1} = 0$$$$a_{1} + a_{2} x_{2} + a_{3} y_{2} = 1$$<p>
+$$a_{1} + a_{2} x_{3} + a_{3} y_{3} = 0$$</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>La tercera $N_3$:</p>
+$$a_{1} + a_{2} x_{1} + a_{3} y_{1} = 0$$$$a_{1} + a_{2} x_{2} + a_{3} y_{2} = 0$$<p>
+$$a_{1} + a_{2} x_{3} + a_{3} y_{3} = 1$$</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Si resolvemos cada una de estas ecuaciones de manera simultanea, obtenemos las tres funciones de forma $N_1^{(e)}, N_2^{(e)}, N_3^{(e)}$:</p>
+$$N_1^{(e)}(x,y) = \dfrac {1} {2A^{(e)}} \left[ (x_2y_3-x_3y_2)+(y_2-y_3)x+(x_3-x_2)y\right]$$$$N_2^{(e)}(x,y) = \dfrac {1} {2A^{(e)}} \left[ (x_3y_1-x_1y_3)+(y_3-y_1)x+(x_1-x_3)y\right]$$$$N_3^{(e)}(x,y) = \dfrac {1} {2A^{(e)}} \left[ (x_1y_2-x_2y_1)+(y_1-y_2)x+(x_2-x_1)y\right]$$
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Donde $2A^{(e)}$ es igual a 2 veces el área del elemento $^{(e)}$, que puede ser calculada usado:</p>
+$$2A^{(e)} = (x_1y_2-x_2y_1)+(x_3y_1-x_1y_3)+(x_2y_3-x_3y_2)$$
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Igual que con los elementos unidimensionales, estas funciones de forma podremos utilizarlas para calcular el valor de nuestra función dependiente $\Phi$ en el interior del elemento usando:</p>
+$$\Phi = N_1(x,y)\Phi_1 + N_2(x,y)\Phi_2 +N_3(x,y)\Phi_3$$
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><strong>Ejemplo 4.1</strong>:</p>
+<p>Como un ejemplo ilustrativo, queremos calcular la temperatura $T$ en un punto específico dentro de un elemento. Definiremos los valores de nuestra variable dependiente $T$ en los nodos como $T_1= 10^oC$, $T_2= 20^oC$, $T_3= 30^oC$. Las coordenadas de los nodos son $x_1=0$, $y_1=0$, $x_2=2$, $y_2=1$, $x_3=1$ y $y_3=2$ ($cm$). El punto del que queremos saber la temperatura es $x=0.5$ y $y=0.5$</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Usamos:</p>
+$$T = N_1 T_1 + N_2 T_2 +N_3 T_3$$
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Donde:</p>
+$$N_1^{(e)}(x,y) = \dfrac {1} {2A^{(e)}} \left[ (2\cdot 2-1\cdot 1)+(1-2)x+(1-2)y\right]$$$$N_2^{(e)}(x,y) = \dfrac {1} {2A^{(e)}} \left[ (1\cdot 0-0\cdot 2)+(2-0)x+(0-1)y\right]$$$$N_3^{(e)}(x,y) = \dfrac {1} {2A^{(e)}} \left[ (0\cdot 1-2\cdot 0)+(0-1)x+(2-0)y\right]$$<p>y</p>
+$$2A^{(e)} = (0\cdot 1-2\cdot 0)+(1\cdot 0-0\cdot 2)+(2\cdot 2-1\cdot 1)= 3$$
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Por lo tanto, en $x=0.5$ y $y=0.5$:</p>
+$$N_1^{(e)}(x,y) = \dfrac {1} {3} \left[ 3-0.5-0.5 \right] = \dfrac {2.0} {3}$$$$N_2^{(e)}(x,y) = \dfrac {1} {3} \left[ 1-0.5 \right] = \dfrac {0.5} {3}$$$$N_3^{(e)}(x,y) = \dfrac {1} {3} \left[ 0.5+1\right] = \dfrac {0.5} {3}$$
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Y:</p>
+$$T(0.5,0.5)=\dfrac {2.0} {3}(10)+\dfrac {0.5} {3} (20)+\dfrac {0.5} {3} (30)=15^oC$$
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Gradiente-de-las-funciones-de-forma-lineales">Gradiente de las funciones de forma lineales<a class="anchor-link" href="#Gradiente-de-las-funciones-de-forma-lineales">&#182;</a></h3><p>Los componentes del gradiente $\nabla$ de la función se pueden obtener haciendo:</p>
+$$\dfrac{\partial\Phi}{\partial x} = \dfrac{\partial N_1}{\partial x} \Phi_1 +\dfrac{\partial N_2}{\partial x} \Phi_2 +\dfrac{\partial N_3}{\partial x} \Phi_3 $$$$\dfrac{\partial\Phi}{\partial y} = \dfrac{\partial N_1}{\partial y} \Phi_1 +\dfrac{\partial N_2}{\partial y} \Phi_2 +\dfrac{\partial N_3}{\partial y} \Phi_3 $$
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Las derivadas de cada función se pueden calcular fácilmente, por ejemplo:</p>
+$$\dfrac{\partial N_1}{\partial x} = \dfrac {y_2-y_3} {2A}$$
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>De tal manera que:</p>
+$$\dfrac{\partial\Phi}{\partial x} = \dfrac {1} {2A} \left[ (y_2-y_3)\Phi_1 + (y_3-y_1)\Phi_2 + (y_1-y_2)\Phi_3 \right]$$$$\dfrac{\partial\Phi}{\partial y} = \dfrac {1} {2A} \left[ (x_3-x_2)\Phi_1 + (x_1-x_3)\Phi_2 + (x_2-x_1)\Phi_3 \right]$$<p>Nótese como las derivadas son constantes en todo el elemento (no dependen de $x$ ni de $y$), pues se trata de planos.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Funciones-de-forma-cuadr%C3%A1ticas-y-c%C3%BAbicas">Funciones de forma cuadr&#225;ticas y c&#250;bicas<a class="anchor-link" href="#Funciones-de-forma-cuadr%C3%A1ticas-y-c%C3%BAbicas">&#182;</a></h3><p>Si colocamos nodos extra en las aristas podemos hacer una interpolación de la forma:</p>
+$$\Phi= a_1+a_2x+a_3y+a_4x^2+a_5xy+a_6y^2$$<p>Con estas es posible resolver seis ecuaciones simultaneas con seis incógnitas (¡por nodo!).</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>De manera similar, las ecuaciones cúbicas serían:</p>
+$$\Phi= a_1+a_2x+a_3y+a_4x^2+a_5xy+a_6y^2+a_7x^3+a_8x^2y+a_9xy^2+a_{10}y^3$$
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>La solución de estas ecuaciones no solo es implica mucho trabajo, sino que además su resultado es extremadamente extenso.</p>
+
+</div>
+</div>
+</div>
+ 
+
