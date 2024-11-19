@@ -1,0 +1,149 @@
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><img src="Imagenes/Titulos/Head4-5.png" alt="Titulo"></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Integraci%C3%B3n-num%C3%A9rica">Integraci&#243;n num&#233;rica<a class="anchor-link" href="#Integraci%C3%B3n-num%C3%A9rica">&#182;</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>La formulación de las integrales en términos de $\xi$ y $\eta$ permite plantear las ecuaciones con límites de integración simples. Esto es particularmente práctico cuando tenemos fronteras curvas o fornteras que no son paralelas a los ejes de coordenadas.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Las integrales se definen como:</p>
+$$\int\limits_{-a}^{a}\int\limits_{-b}^{b}F(x,y)dxdy = \int\limits_{-1}^{1}\int\limits_{-1}^{1}f(\xi,\eta)|\mathbf{J}|d\xi d\eta$$
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>La matriz de conducción se convierte en:</p>
+$$\mathbf{K}^{(e)} = \iint\limits_{\Omega^{(e)}}K\left[ \dfrac {\partial N_i} {\partial x}\dfrac {\partial N_j} {\partial x} + \dfrac {\partial N_i} {\partial y}\dfrac {\partial N_j} {\partial y} \right]dxdy$$$$\mathbf{K}^{(e)} =\int\limits_{-1}^{1}\int\limits_{-1}^{1} K\left[ \dfrac {\partial N_i} {\partial \xi}\dfrac {\partial N_j} {\partial \xi} + \dfrac {\partial N_i} {\partial \eta}\dfrac {\partial N_j} {\partial \eta} \right]|\mathbf{J}|d\xi d\eta$$<p>Donde las derivadas se pueden obtener de las funciones de forma utilizadas.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>La integral del producto $N_iN_j$ se convierte en:</p>
+$$\iint\limits_{\Omega^{(e)}} N_i N_j dxdy = \int\limits_{-1}^{1}\int\limits_{-1}^{1} N_i N_j |\mathbf{J}|d\xi d\eta$$<p>La integral del lado derecho no se trata ya de polinomios simples y debido al término $1/|\mathbf{J}|$ las derivadas con respecto a $\xi$ y $\eta$ pueden ser problemáticas. Al igual que con los elementos triangulares el método más común para resolver <em>numericamente</em> estas integrales es usar la Cuadratura de Gauss.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Este método aproxima el valor de una integral con una suma ponderada sobre un número finito de puntos. Para estos elementos usamos:</p>
+$$\int\limits_{-1}^{1}\int\limits_{-1}^{1} N_i N_j d\xi d\eta \cong \sum_{i=1}^N\sum_{j=1}^N W_i W_j f(\xi_i, \eta_i)$$
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>El valor de $N$ dependerá del máximo exponente que exista para $\xi$ y $\eta$ en la expresión: podemos integrar exactamente un polinomio de grado $2N-1$.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Para un elemento bilinear podemos utilizar, con $N=2$:</p>
+<table>
+<thead><tr>
+<th style="text-align:center">Punto</th>
+<th style="text-align:center">$\xi_i$</th>
+<th style="text-align:center">$\eta_j$</th>
+<th style="text-align:center">$W_i$</th>
+<th style="text-align:center">$W_j$</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">$1$</td>
+<td style="text-align:center">$-1/\sqrt{3}$</td>
+<td style="text-align:center">$-1/\sqrt{3}$</td>
+<td style="text-align:center">$1$</td>
+<td style="text-align:center">$1$</td>
+</tr>
+<tr>
+<td style="text-align:center">$2$</td>
+<td style="text-align:center">$1/\sqrt{3}$</td>
+<td style="text-align:center">$-1/\sqrt{3}$</td>
+<td style="text-align:center">$1$</td>
+<td style="text-align:center">$1$</td>
+</tr>
+<tr>
+<td style="text-align:center">$3$</td>
+<td style="text-align:center">$1/\sqrt{3}$</td>
+<td style="text-align:center">$1/\sqrt{3}$</td>
+<td style="text-align:center">$1$</td>
+<td style="text-align:center">$1$</td>
+</tr>
+<tr>
+<td style="text-align:center">$4$</td>
+<td style="text-align:center">$-1/\sqrt{3}$</td>
+<td style="text-align:center">$1/\sqrt{3}$</td>
+<td style="text-align:center">$1$</td>
+<td style="text-align:center">$1$</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><img src="Imagenes/Fig5.8.png" alt="Figura 5.8"></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Para elemento cuadrático de 8 nodos, con $N=3$:</p>
+<p><img src="Imagenes/Table5.2.png" alt="Table5.2"></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><img src="Imagenes/Fig5.9.png" alt="Figura 5.9"></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><strong>Ejercicio:</strong></p>
+<p>Integrar numérica y analíticamente la expresión:</p>
+$$\int\limits_{-1}^1 \int\limits_{-1}^1 9 \xi^2 \eta^2 d\xi d\eta$$
+</div>
+</div>
+</div>
+ 
+
